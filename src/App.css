@@ -13,7 +13,8 @@ nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 100px 100px 1fr;
-    background: linear-gradient(to right, blueviolet, #f082f6);
+    background: linear-gradient(to right, rgba(138, 43, 226, 0.9), rgba(240, 130, 246, 0.9));
+
     padding-bottom: 15px;
 }
 
@@ -98,7 +99,7 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: blueviolet;
+    background-color: rgb(137, 44, 224, 0.9);
     height: 40px;
     display: grid;
     place-items: center;
@@ -118,14 +119,6 @@ nav {
 }
 
 .app {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.strip {
     position: fixed;
     height: 100vh;
     width: 100vw;

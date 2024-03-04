@@ -4,7 +4,7 @@ import Lottie from 'react-lottie'
 import animationData from '../../assets/out.json'
 
 const Nav = () => {
-    const [logged, setLogged] = useState(false)
+    const [logged, setLogged] = useState(true)
 
     const dop = {
 
