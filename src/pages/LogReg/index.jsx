@@ -1,10 +1,25 @@
-import React from 'react'
+import { useEffect } from 'react'
 import LoginRegister from '../../components/LoginRegister'
+import { motion, useAnimation } from 'framer-motion';
 
 const LogReg = () => {
+    const controls = useAnimation();
+
+    useEffect(() => {
+        controls.start({ opacity: 1 });
+    }, [controls]);
+
     return (
-        <div className='uform'>
-            <LoginRegister />
+        <div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={controls}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                style={{ width: '100%', height: '100%' }}
+            >
+                <LoginRegister />
+            </motion.div>
         </div>
     )
 }

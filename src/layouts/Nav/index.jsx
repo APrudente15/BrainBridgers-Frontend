@@ -2,9 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Lottie from 'react-lottie'
 import animationData from '../../assets/out.json'
+import { motion, useAnimation } from 'framer-motion';
 
 const Nav = () => {
     const [logged, setLogged] = useState(false)
+
+    const controls = useAnimation();
+
+    useEffect(() => {
+        controls.start({ x: 0 });
+    }, [controls]);
 
     const dop = {
 
@@ -16,11 +23,21 @@ const Nav = () => {
         },
     }
 
+    const variants = {
+        hidden: { y: '-100%' },
+        visible: { y: 0 },
+    };
 
     if (logged) {
         return (
             <>
-                <nav>
+                <motion.nav
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={variants}
+                    transition={{ duration: 1, ease: 'easeInOut' }}
+                >
                     <div className='n-top'>
                         <div className='logo'><img className='img' src='./src/assets/logo.png' /></div>
                     </div>
@@ -32,8 +49,8 @@ const Nav = () => {
                         <NavLink><div className='nl'>Discover</div></NavLink>
 
                     </div>
-
-                </nav><Outlet />
+                </motion.nav>
+                <Outlet />
             </>
         )
     }
@@ -41,12 +58,19 @@ const Nav = () => {
     else {
         return (
             <>
-                <nav>
+                <motion.nav
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    variants={variants}
+                    transition={{ duration: 1, ease: 'easeInOut' }}
+                >
                     <div className='n-top'>
                         <div className='logo'><img className='img' src='./src/assets/logo.png' /></div>
                     </div>
                     <div className='out'></div>
-                </nav > <Outlet />
+                </motion.nav >
+                <Outlet />
             </>
         )
     }
