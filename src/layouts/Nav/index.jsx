@@ -4,7 +4,7 @@ import Lottie from 'react-lottie'
 import animationData from '../../assets/out.json'
 
 const Nav = () => {
-    const [logged, setLogged] = useState(true)
+    const [logged, setLogged] = useState(false)
 
     const dop = {
 
@@ -22,7 +22,7 @@ const Nav = () => {
             <>
                 <nav>
                     <div className='n-top'>
-                        <div className='logo'>Logo</div>
+                        <div className='logo'><img className='img' src='./src/assets/logo.png' /></div>
                     </div>
                     <div className='out'><Lottie options={dop} /></div>
                     <div className='r'>
@@ -43,7 +43,7 @@ const Nav = () => {
             <>
                 <nav>
                     <div className='n-top'>
-                        <div className='logo'>Logo</div>
+                        <div className='logo'><img className='img' src='./src/assets/logo.png' /></div>
                     </div>
                     <div className='out'></div>
                 </nav > <Outlet />

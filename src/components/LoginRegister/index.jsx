@@ -23,7 +23,7 @@ const LoginRegister = () => {
                     <div className="overlay-panel overlay-left">
                         <h1>Welcome Back!</h1>
                         <p>
-                            To keep connected with us please login with your personal info
+                            Please login with your personal info
                         </p>
                         <button
                             className="ghost"

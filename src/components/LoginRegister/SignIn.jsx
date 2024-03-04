@@ -8,8 +8,7 @@ function SignInForm() {
     return (
         <div className="form-container sign-in-container">
             <form onSubmit={handleOnSubmit}>
-                <h1>Sign in</h1>
-                <span>Existing User</span>
+                <h1>Existing User</h1>
                 <input
                     type="name"
                     placeholder="name"

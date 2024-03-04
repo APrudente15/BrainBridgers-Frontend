@@ -20,8 +20,7 @@ function SignUpForm() {
     return (
         <div className="form-container sign-up-container">
             <form onSubmit={handleOnSubmit}>
-                <h1>Create Account</h1>
-                <span>New User</span>
+                <h1>New User</h1>
                 <input
                     type="text"
                     placeholder="Name"

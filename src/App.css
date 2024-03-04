@@ -1,20 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
-    font-family: "Lexend Mega", sans-serif;
-}
-
-::-webkit-scrollbar {
-    display: none;
+    font-family: "Rokkitt", serif;
 }
 
 nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 100px 100px 1fr;
-    background: linear-gradient(to right, rgba(138, 43, 226, 0.9), rgba(240, 130, 246, 0.9));
-
+    background: linear-gradient(to top, rgb(162, 22, 218), rgba(240, 130, 246));
     padding-bottom: 15px;
 }
 
@@ -25,6 +20,11 @@ nav {
     grid-row-end: 1;
     text-align: center;
     font-size: 60px;
+}
+
+.img {
+    height: 250px;
+    width: 300px;
 }
 
 .r {
@@ -41,14 +41,20 @@ nav {
     grid-column-end: 7;
 }
 
+.r,
+.d {
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
 .nl {
     font-size: 35px;
     display: grid;
     place-items: center;
-    background-color: rgb(156, 88, 219);
+    background-color: rgba(189, 61, 249, 0.413);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s, box-shadow 0.1s;
     padding: 20px;
     min-width: 200px;
     max-width: 100%;
@@ -56,13 +62,13 @@ nav {
 }
 
 .nl:hover {
-    background-color: rgb(126, 58, 189);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgb(209, 64, 225);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .r:hover a,
 .d:hover a {
-    color: #e4ca24;
+    color: #ffffff;
 }
 
 .d a,
@@ -99,17 +105,19 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgb(137, 44, 224, 0.9);
+    background-color: rgb(231, 130, 246);
     height: 40px;
     display: grid;
     place-items: center;
 }
 
 .lr {
+    position: relative;
     display: grid;
     place-items: center;
     margin-top: 20vh;
     transform: scale(1.5);
+    z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
@@ -119,11 +127,19 @@ nav {
 }
 
 .app {
-    position: fixed;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    background-image: url('https://static.myfigurecollection.net/upload/pictures/2022/05/05/3090990.gif');
+}
+
+.strip {
+    background-image: url('https://img.freepik.com/premium-vector/seamless-monochrome-repeating-pattern-sun-snow-drop-star_387335-1257.jpg');
     background-repeat: repeat;
     background-size: auto;
-    background-color: rgb(137, 43, 226);
+    opacity: 0.1;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
