@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 100px 100px 1fr;
+    background: linear-gradient(to right, blueviolet, #e4ca24);
+    padding-bottom: 15px;
+}
+
+.n-top {
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    font-size: 60px;
+}
+
+.r {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.d {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.r,
+.d {
+    font-size: 35px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(156, 88, 219);
+    margin: 10px 0 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.r:hover,
+.d:hover {
+    background-color: rgb(126, 58, 189);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.r:hover a,
+.d:hover a {
+    color: #e4ca24;
+}
+
+.d a,
+.r a {
+    text-decoration: none;
+    color: black;
+}
+
+.d a:hover,
+.r a:hover {
+    text-decoration: none;
+}
+
+.d a:active,
+.r a:active {
+    color: aqua;
+}
+
+.out {
+    width: 80px;
+    height: 90px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 9;
+    grid-column-end: 9;
+}
+
+.out:hover {
+    transform: scale(1.5);
+}
