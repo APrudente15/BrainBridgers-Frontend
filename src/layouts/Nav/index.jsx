@@ -7,17 +7,15 @@ const Nav = () => {
     const [logged, setLogged] = useState(false)
 
     const dop = {
-        loop: false,
+
+        loop: 2,
         autoplay: true,
         animationData: animationData,
         rendererSettings: {
             preserveAspectRatio: "xMidYMid slice"
-        }
+        },
     }
 
-    useEffect(() => {
-        setLogged(true)
-    }, [])
 
     if (logged) {
         return (
@@ -28,10 +26,10 @@ const Nav = () => {
                     </div>
                     <div className='out'><Lottie options={dop} /></div>
                     <div className='r'>
-                        <NavLink>Rate</NavLink>
+                        <NavLink><div className='nl'>Rate</div></NavLink>
                     </div>
                     <div className='d'>
-                        <NavLink>Discover</NavLink>
+                        <NavLink><div className='nl'>Discover</div></NavLink>
 
                     </div>
 
@@ -45,10 +43,10 @@ const Nav = () => {
             <>
                 <nav>
                     <div className='n-top'>
-                        <div className='logo'></div>
+                        <div className='logo'>Logo</div>
                     </div>
-                </nav>
-                <Outlet />
+                    <div className='out'></div>
+                </nav > <Outlet />
             </>
         )
     }

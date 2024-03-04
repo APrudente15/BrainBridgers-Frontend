@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap');
+
 * {
     margin: 0;
+    font-family: "Lexend Mega", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 100px 100px 1fr;
-    background: linear-gradient(to right, blueviolet, #e4ca24);
+    background: linear-gradient(to right, blueviolet, #f082f6);
     padding-bottom: 15px;
 }
 
@@ -33,20 +40,21 @@ nav {
     grid-column-end: 7;
 }
 
-.r,
-.d {
+.nl {
     font-size: 35px;
     display: grid;
     place-items: center;
     background-color: rgb(156, 88, 219);
-    margin: 10px 0 10px 0;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 100%;
+    font-weight: bold;
 }
 
-.r:hover,
-.d:hover {
+.nl:hover {
     background-color: rgb(126, 58, 189);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -67,9 +75,9 @@ nav {
     text-decoration: none;
 }
 
-.d a:active,
-.r a:active {
-    color: aqua;
+.d:active a,
+.r:active a {
+    color: rgb(253, 241, 25);
 }
 
 .out {
@@ -83,4 +91,46 @@ nav {
 
 .out:hover {
     transform: scale(1.5);
+}
+
+.foot {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: blueviolet;
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+
+.lr {
+    display: grid;
+    place-items: center;
+    margin-top: 20vh;
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 768px) {
+    .lr {
+        transform: scale(1);
+    }
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.strip {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://static.myfigurecollection.net/upload/pictures/2022/05/05/3090990.gif');
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: rgb(137, 43, 226);
 }
