@@ -39,7 +39,7 @@ const Nav = () => {
                     transition={{ duration: 1, ease: 'easeInOut' }}
                 >
                     <div className='n-top'>
-                        <div className='logo'><img className='img' src='./src/assets/logo.png' /></div>
+                        <div className='logo'></div>
                     </div>
                     <div className='out'><Lottie options={dop} /></div>
                     <div className='r'>
