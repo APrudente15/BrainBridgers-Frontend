@@ -15,7 +15,9 @@ function App() {
         </Route>
       </Routes>
       <Foot />
-    </div >
+      <div className='strip'>
+      </div >
+    </div>
   )
 }
 

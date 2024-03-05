@@ -17,8 +17,8 @@ p {
 
 button {
     border-radius: 20px;
-    border: 1px solid rgb(162, 22, 218);
-    background-color: rgba(162, 22, 218, 0.777);
+    border: 1px solid rgb(227, 131, 133, 0.8);
+    background-color: rgba(227, 131, 133, 0.777);
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -32,7 +32,7 @@ button {
 button:hover {
     transform: scale(1.25);
     background-color: #fff;
-    color: #ba42d5;
+    color: rgb(227, 131, 133, 0.8);
 }
 
 button:active {
@@ -50,7 +50,7 @@ button.ghost {
 
 button.ghost:hover {
     background-color: #fff;
-    color: rgb(162, 22, 218);
+    color: rgb(227, 131, 133, 0.8);
 }
 
 form {
@@ -78,9 +78,9 @@ input {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
+    width: 40vw;
+    height: 35vh;
+    transform: scale(1.5);
 }
 
 .form-container {
@@ -145,7 +145,7 @@ input {
 }
 
 .overlay {
-    background: #ba42d5;
+    background: rgb(227, 131, 133, 0.8);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;

@@ -9,7 +9,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 100px 100px 1fr;
-    background: linear-gradient(to top, rgb(162, 22, 218), rgba(240, 130, 246));
+    background: rgba(227, 131, 133, 0.8);
     padding-bottom: 15px;
 }
 
@@ -51,7 +51,7 @@ nav {
     font-size: 35px;
     display: grid;
     place-items: center;
-    background-color: rgba(189, 61, 249, 0.413);
+    background-color: rgba(227, 131, 133);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: background-color 0.5s, box-shadow 0.1s;
@@ -62,7 +62,7 @@ nav {
 }
 
 .nl:hover {
-    background-color: rgb(209, 64, 225);
+    background-color: rgb(232, 119, 121);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
@@ -105,7 +105,7 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgb(231, 130, 246);
+    background-color: rgb(227, 131, 133, 0.8);
     height: 40px;
     display: grid;
     place-items: center;
@@ -115,15 +115,7 @@ nav {
     position: relative;
     display: grid;
     place-items: center;
-    margin-top: 20vh;
-    transform: scale(1.5);
-    z-index: 2;
-}
-
-@media screen and (max-width: 768px) {
-    .lr {
-        transform: scale(1);
-    }
+    margin-top: 15vh;
 }
 
 .app {
@@ -132,10 +124,11 @@ nav {
 }
 
 .strip {
-    background-image: url('https://img.freepik.com/premium-vector/seamless-monochrome-repeating-pattern-sun-snow-drop-star_387335-1257.jpg');
+    background-image: url('https://assets-global.website-files.com/6364b6fd26e298b11fb9391f/6364b6fd26e2985bfab93cd0_DrawKit0096_Education_Icons_Banner-min.png');
     background-repeat: repeat;
     background-size: auto;
-    opacity: 0.1;
+    background-color: rgba(255, 0, 204, 0.441);
+    opacity: 0.15;
     z-index: -1;
     position: fixed;
     top: 0;
