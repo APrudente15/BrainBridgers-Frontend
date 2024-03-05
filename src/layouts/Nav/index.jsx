@@ -73,7 +73,7 @@ const Nav = () => {
                     transition={{ duration: 1, ease: 'easeInOut' }}
                 >
                     <div className='n-top'>
-                        <div className='logo'><img className='img' src='https://www.adobe.com/content/dam/cc/us/en/creativecloud/design/discover/mascot-logo-design/mascot-logo-design_fb-img_1200x800.jpg' alt='logo' /></div>
+                        <div className='logo'><img className='img' src='./src/assets/logo.png' alt='logo' /></div>
                     </div>
                     <div className='out'></div>
                 </motion.nav >
