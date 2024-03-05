@@ -28,6 +28,12 @@ const Nav = () => {
         visible: { y: 0 },
     };
 
+    const new1 = () => {
+        setLogged(!logged)
+    }
+
+
+
     if (logged) {
         return (
             <>
@@ -50,6 +56,7 @@ const Nav = () => {
 
                     </div>
                 </motion.nav>
+                <button onClick={new1}></button>
                 <Outlet />
             </>
         )
@@ -70,6 +77,7 @@ const Nav = () => {
                     </div>
                     <div className='out'></div>
                 </motion.nav >
+                <button onClick={new1}></button>
                 <Outlet />
             </>
         )
