@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './layouts/Nav'
 import Foot from './layouts/Foot'
 import LogReg from './pages/LogReg'
+import Rate from './pages/Rate'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <div className='app'>
       <Routes>
         <Route path='/' element={<Nav />} >
-          <Route index element={<LogReg />} />
+          <Route index element={<Rate />} />
         </Route>
       </Routes>
       <Foot />

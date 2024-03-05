@@ -8,7 +8,7 @@
 nav {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 100px 100px 1fr;
+    grid-template-rows: 10vh 1fr;
     background: rgba(227, 131, 133, 0.8);
     padding-bottom: 15px;
 }
@@ -16,8 +16,6 @@ nav {
 .n-top {
     grid-column-start: 3;
     grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 1;
     text-align: center;
     font-size: 60px;
 }
@@ -28,15 +26,11 @@ nav {
 }
 
 .r {
-    grid-row-start: 2;
-    grid-row-end: 2;
     grid-column-start: 4;
     grid-column-end: 5;
 }
 
 .d {
-    grid-row-start: 2;
-    grid-row-end: 2;
     grid-column-start: 6;
     grid-column-end: 7;
 }
@@ -45,6 +39,7 @@ nav {
 .d {
     margin-bottom: 10px;
     border-radius: 20px;
+    margin-top: 15px;
 }
 
 .nl {
@@ -135,4 +130,109 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.rate-container {
+    border-style: solid;
+    height: 80vh;
+    display: grid;
+}
+
+.changer {
+    border-style: solid;
+    margin: 5vh 5vw 5vh 5vw;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: 8vh 8vh 8vh 8vh 15vh 1fr;
+    row-gap: 5vh;
+    column-gap: 1vw;
+}
+
+.switch {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-column-end: 15;
+    border-style: solid;
+    text-align: center;
+    border-radius: 10vw;
+    background-image: url('https://t3.ftcdn.net/jpg/02/23/24/00/360_F_223240002_6GAvK9B0uB4v5wGIkEiAUAOun4C4hwGd.jpg');
+}
+
+.selector {
+    background-color: rgb(218, 33, 33);
+    margin: 3vh 2vw 3vh 2vw;
+}
+
+.lesson-cont {
+    border-style: solid;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 13;
+}
+
+.conf {
+    grid-column-start: 2;
+    grid-column-end: 8;
+}
+
+.enj {
+    grid-column-start: 9;
+    grid-column-end: 15;
+}
+
+.conf,
+.enj {
+    border-style: solid;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 5vh 5vh 1fr;
+}
+
+.vote-title {
+    border-style: solid;
+    text-align: center;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.smiley-1 {
+    border-style: solid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    height: 10vh;
+}
+
+.smiley-2 {
+    border-style: solid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row: 2;
+    height: 10vh;
+}
+
+.smiley-3 {
+    border-style: solid;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row: 2;
+    height: 10vh;
+    transform: rotate(9deg);
+}
+
+.smiley-3:hover {
+    transform: rotate(9deg) scale(1.5);
+}
+
+.smiley-1:hover,
+.smiley-2:hover {
+    transform: scale(1.5);
+}
+
+.smiley {
+    height: 6vh;
+    width: 4vw;
 }

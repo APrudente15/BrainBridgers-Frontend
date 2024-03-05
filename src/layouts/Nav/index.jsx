@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Lottie from 'react-lottie'
 import animationData from '../../assets/out.json'
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion'
 
 const Nav = () => {
     const [logged, setLogged] = useState(false)
@@ -44,7 +44,7 @@ const Nav = () => {
                     variants={variants}
                     transition={{ duration: 1, ease: 'easeInOut' }}
                 >
-                    <div className='n-top'>
+                    <div>
                         <div className='logo'></div>
                     </div>
                     <div className='out'><Lottie options={dop} /></div>
@@ -53,7 +53,6 @@ const Nav = () => {
                     </div>
                     <div className='d'>
                         <NavLink><div className='nl'>Discover</div></NavLink>
-
                     </div>
                 </motion.nav>
                 <button onClick={new1}></button>
