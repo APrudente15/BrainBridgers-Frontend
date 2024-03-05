@@ -9,12 +9,13 @@ function App() {
 
   return (
     <div className='app'>
-      <Nav />
-      <div className='strip'></div>
-      <div className='lr'><LogReg /></div>
-
+      <Routes>
+        <Route path='/' element={<Nav />} >
+          <Route index element={<LogReg />} />
+        </Route>
+      </Routes>
       <Foot />
-    </div>
+    </div >
   )
 }
 

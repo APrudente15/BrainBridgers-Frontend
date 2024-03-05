@@ -10,7 +10,7 @@ const LogReg = () => {
     }, [controls]);
 
     return (
-        <div>
+        <div >
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={controls}
@@ -18,7 +18,9 @@ const LogReg = () => {
                 transition={{ duration: 1, ease: 'easeInOut' }}
                 style={{ width: '100%', height: '100%' }}
             >
-                <LoginRegister />
+                <div className='lr'>
+                    <LoginRegister />
+                </div>
             </motion.div>
         </div>
     )
