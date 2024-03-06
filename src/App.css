@@ -376,7 +376,7 @@ nav {
 
 .lesson-cont {
     border-style: solid;
-    background-color: rgba(203, 108, 230, 0.3);
+    background-color: rgb(247, 220, 255);
     grid-row-start: 2;
     grid-row-end: 5;
     grid-column-start: 4;
@@ -384,8 +384,11 @@ nav {
     border-radius: 30px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    background-image: url('https://i.pinimg.com/originals/9a/9f/be/9a9fbef52baedbc249519fd6e50b1d63.png');
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 .conf {
@@ -403,8 +406,8 @@ nav {
     grid-row-start: 5;
     grid-row-end: 5;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 5vh 5vh 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
 }
 
 .vote-title {
@@ -444,11 +447,65 @@ nav {
     transform: scale(1.5);
 }
 
-.smiley {
-    height: 6vh;
-    width: 4vw;
-    grid-row: 3;
-    grid-column: 1;
+.smileyc {
+    height: 12vh;
+    width: 9vw;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.leg-wrap {}
+.smileye {
+    height: 12vh;
+    width: 9vw;
+    grid-row-start: 2;
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.less-num {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: start;
+    font-style: italic;
+    opacity: 0.5;
+    padding-top: 5px;
+}
+
+.sub {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    font-size: 100px;
+    margin-top: 22px;
+    height: 100px;
+    font-weight: 90;
+}
+
+.time {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row: 1;
+    width: 95%;
+    text-align: end;
+    font-style: italic;
+    opacity: 0.5;
+    padding-top: 5px;
+}
+
+.message {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    opacity: 0.6;
+    padding-bottom: 25px;
+}
+
+.stamp {
+    height: 200px;
+    width: 250px;
+    position: absolute;
+    top: 48vh;
+    right: 43vw;
+    opacity: 0.3;
+    transform: rotate(23deg);
+}

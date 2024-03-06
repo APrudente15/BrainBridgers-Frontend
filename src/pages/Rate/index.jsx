@@ -126,6 +126,7 @@ const Rate = () => {
     const [complete, setComplete] = useState(false)
     const [lessonData, setLessonData] = useState({})
     const [init, setInit] = useState(false)
+    const [time, setTime] = useState('09:00 - 10:00')
 
     const controls = useAnimation();
 
@@ -170,26 +171,31 @@ const Rate = () => {
                 setSubject(lessonData.lessons[0].subjectName);
                 setLevelC(lessonData.lessons[0].confidence)
                 setLevelE(lessonData.lessons[0].enjoyment)
+                setTime('09:00 - 10:00')
             }
             if (lessonNum === 2) {
                 setSubject(lessonData.lessons[1].subjectName)
                 setLevelE(lessonData.lessons[1].enjoyment)
                 setLevelC(lessonData.lessons[1].confidence)
+                setTime('10:00 - 11:00')
             }
             if (lessonNum === 3) {
                 setSubject(lessonData.lessons[2].subjectName)
                 setLevelE(lessonData.lessons[2].enjoyment)
                 setLevelC(lessonData.lessons[2].confidence)
+                setTime('11:00 - 12:00')
             }
             if (lessonNum === 4) {
                 setSubject(lessonData.lessons[3].subjectName)
                 setLevelE(lessonData.lessons[3].enjoyment)
                 setLevelC(lessonData.lessons[3].confidence)
+                setTime('12:00 - 13:00')
             }
             if (lessonNum === 5) {
                 setSubject(lessonData.lessons[4].subjectName)
                 setLevelE(lessonData.lessons[4].enjoyment)
                 setLevelC(lessonData.lessons[4].confidence)
+                setTime('14:00 - 15:00')
             }
         }
     }, [lessonNum])
@@ -402,20 +408,22 @@ const Rate = () => {
                     transition={{ duration: 1, ease: 'easeInOut' }}
                     style={{ width: '100%', height: '100%' }}
                     className='lesson-cont'>
-                    <h1>Lesson {lessonNum}</h1>
-                    <h1>{subject}</h1>
-                    <div className='smiley'>
-                        <div className='sc'>
-                            <h1>Confidence:</h1>
-                            <Lottie options={dopOptions[dop2]} />
-                        </div>
-                        <div className='se'>
-                            <h1>Enjoyment:</h1>
-                            <Lottie options={dopOptions[dop]} />
-                        </div>
+                    <h1 className='less-num'>Lesson {lessonNum}</h1>
+                    <h1 className='sub'>{subject}</h1>
+                    <h1 className='time'>{time}</h1>
+                    <div className='smileyc'>
+                        <h1>Confidence</h1>
+                        <Lottie options={dopOptions[dop2]} />
                     </div>
-                    <div>
-                        {complete ? <h1 className='message'>Thank you for your feedback!</h1> : null}
+                    <div className='smileye'>
+                        <h1>Enjoyment</h1>
+                        <Lottie options={dopOptions[dop]} />
+                    </div>
+                    <div className='message'>
+                        {complete ? <h1 >Thank you for your feedback!</h1> : null}
+                    </div>
+                    <div className='tag'>
+                        {complete ? <img className='stamp' src='https://www.onlygfx.com/wp-content/uploads/2018/04/completed-stamp-2.png' /> : null}
                     </div>
                 </motion.div>
                 <motion.div
