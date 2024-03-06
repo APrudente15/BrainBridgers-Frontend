@@ -196,7 +196,6 @@ const Rate = () => {
 
     const lowe = async () => {
         try {
-            setLevelE(1)
             const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
@@ -211,12 +210,12 @@ const Rate = () => {
             console.log('PATCH request for enjoyment successful')
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelE(1) }
+
     }
 
     const mide = async () => {
         try {
-            setLevelE(2)
             const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
@@ -228,15 +227,14 @@ const Rate = () => {
             if (!enjoymentResponse.ok) {
                 throw new Error(`HTTP error! Status: ${enjoymentResponse.status}`)
             }
-            console.log('PATCH request for enjoyment successful')
+            console.log(`PATCH request for enjoyment successful on ${lessonNum}`)
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelE(2) }
     }
 
     const highe = async () => {
         try {
-            setLevelE(3)
             const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
@@ -251,12 +249,11 @@ const Rate = () => {
             console.log('PATCH request for enjoyment successful')
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelE(3) }
     }
 
     const lowc = async () => {
         try {
-            setLevelC(1)
             const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
@@ -271,12 +268,11 @@ const Rate = () => {
             console.log('PATCH request for confidence successful')
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelC(1) }
     }
 
     const midc = async () => {
         try {
-            setLevelC(2)
             const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
@@ -291,12 +287,11 @@ const Rate = () => {
             console.log('PATCH request for confidence successful')
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelC(2) }
     }
 
     const highc = async () => {
         try {
-            setLevelC(3)
             const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
@@ -311,7 +306,7 @@ const Rate = () => {
             console.log('PATCH request for confidence successful')
         } catch (error) {
             console.error('Error in low method:', error)
-        }
+        } finally { setLevelC(3) }
     }
 
     useEffect(() => {
@@ -410,13 +405,17 @@ const Rate = () => {
                     <h1>Lesson {lessonNum}</h1>
                     <h1>{subject}</h1>
                     <div className='smiley'>
-                        <h1>Confidence:</h1>
-                        <Lottie options={dopOptions[dop]} />
-                        <h1>Enjoyment:</h1>
-                        <Lottie options={dopOptions[dop2]} />
+                        <div className='sc'>
+                            <h1>Confidence:</h1>
+                            <Lottie options={dopOptions[dop2]} />
+                        </div>
+                        <div className='se'>
+                            <h1>Enjoyment:</h1>
+                            <Lottie options={dopOptions[dop]} />
+                        </div>
                     </div>
                     <div>
-                        {complete ? <h1>Thank you for your feedback!</h1> : null}
+                        {complete ? <h1 className='message'>Thank you for your feedback!</h1> : null}
                     </div>
                 </motion.div>
                 <motion.div

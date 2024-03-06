@@ -4,6 +4,7 @@ import Nav from './layouts/Nav'
 import Foot from './layouts/Foot'
 import LogReg from './pages/LogReg'
 import Rate from './pages/Rate'
+import Discover from './pages/Discover'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <div className='app'>
       <Routes>
         <Route path='/' element={<Nav />} >
-          <Route index element={<Rate />} />
+          <Route index element={<Discover />} />
         </Route>
       </Routes>
       <Foot />

@@ -16,6 +16,7 @@ nav {
 .logo2 {
     position: fixed;
     top: 0;
+    left: 2vw;
 }
 
 .n-top {
@@ -384,7 +385,7 @@ nav {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10vh 10vh 10vh 1fr;
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .conf {
@@ -446,4 +447,8 @@ nav {
 .smiley {
     height: 6vh;
     width: 4vw;
+    grid-row: 3;
+    grid-column: 1;
 }
+
+.leg-wrap {}
