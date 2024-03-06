@@ -13,7 +13,9 @@ function App() {
     <div className='app'>
       <Routes>
         <Route path='/' element={<Nav />} >
-          <Route index element={<Rate />} />
+          <Route index element={<LogReg />} />
+          <Route path='/discover' element={<Discover />} />
+          <Route path='/rate' element={<Rate />} />
         </Route>
       </Routes>
       <Foot />

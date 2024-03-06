@@ -381,6 +381,11 @@ const Rate = () => {
         visible: { y: 0 },
     };
 
+    const variants4 = {
+        hidden: { y: '200%' },
+        visible: { y: 0 },
+    };
+
     useEffect(() => {
         controls.start({ opacity: 1 });
     }, [controls]);
@@ -420,10 +425,16 @@ const Rate = () => {
                         <Lottie options={dopOptions[dop]} />
                     </div>
                     <div className='message'>
-                        {complete ? <h1 >Thank you for your feedback!</h1> : null}
+                        {complete ? <h1>Thank you for your feedback!</h1> : null}
                     </div>
                     <div className='tag'>
-                        {complete ? <img className='stamp' src='https://www.onlygfx.com/wp-content/uploads/2018/04/completed-stamp-2.png' /> : null}
+                        {complete ? < motion.img
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={variants4}
+                            transition={{ duration: 0.5, ease: 'easeInOut' }}
+                            className='stamp' src='https://www.onlygfx.com/wp-content/uploads/2018/04/completed-stamp-2.png' /> : null}
                     </div>
                 </motion.div>
                 <motion.div

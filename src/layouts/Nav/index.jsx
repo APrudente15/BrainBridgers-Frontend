@@ -47,10 +47,10 @@ const Nav = () => {
                     </div>
                     <div className='out'><Lottie options={dop} /></div>
                     <div className='r'>
-                        <NavLink><div className='nl'>Rate</div></NavLink>
+                        <NavLink to='/rate'><div className='nl'>Rate</div></NavLink>
                     </div>
                     <div className='d'>
-                        <NavLink><div className='nl'>Discover</div></NavLink>
+                        <NavLink to='/discover'><div className='nl'>Discover</div></NavLink>
                     </div>
                 </motion.nav>
                 <div className='logo2'><img className='img' src='https://github-production-user-asset-6210df.s3.amazonaws.com/110691505/310489420-cb6409c2-fb5f-4caf-927b-394d357a8081.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240306%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240306T121134Z&X-Amz-Expires=300&X-Amz-Signature=0218988590c7e76d7f3134ef387d8096aecd095e54e578a02adeecdb3b6fce73&X-Amz-SignedHeaders=host&actor_id=152859842&key_id=0&repo_id=768040580' alt='logo' /></div>
