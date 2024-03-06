@@ -19,17 +19,19 @@ function SignUpForm() {
 
     return (
         <div className="form-container sign-up-container">
-            <form onSubmit={handleOnSubmit}>
-                <h1>New User</h1>
+            <form className="form" onSubmit={handleOnSubmit}>
+                <h1 className="h1">New User</h1>
                 <input
+                    className="input"
                     type="text"
                     placeholder="Name"
                 />
                 <input
+                    className="input"
                     type="password"
                     placeholder="Password"
                 />
-                <button>Sign Up</button>
+                <button className="button">Sign Up</button>
             </form>
         </div>
     );

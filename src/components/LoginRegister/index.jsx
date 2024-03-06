@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import SignInForm from "./SignIn.jsx"
 import SignUpForm from "./SignUp"
-import "./styles.css"
 
 const LoginRegister = () => {
     const [type, setType] = useState("signIn")
@@ -21,12 +20,12 @@ const LoginRegister = () => {
             <div className="overlay-container">
                 <div className="overlay">
                     <div className="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>
+                        <h1 className="h1">Welcome Back!</h1>
+                        <p className="p">
                             Please login with your personal info
                         </p>
                         <button
-                            className="ghost"
+                            className="button ghost"
                             id="signIn"
                             onClick={() => handleOnClick("signIn")}
                         >
@@ -34,10 +33,11 @@ const LoginRegister = () => {
                         </button>
                     </div>
                     <div className="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Enter your personal details and start journey with us</p>
+                        <h1 className="h1 hf">Hello, Friend!</h1>
+                        <p className="pr">Enter your personal details and start journey with us</p>
+                        <br />
                         <button
-                            className="ghost "
+                            className="button ghost "
                             id="signUp"
                             onClick={() => handleOnClick("signUp")}
                         >
