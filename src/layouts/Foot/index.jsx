@@ -3,7 +3,7 @@ import React from 'react'
 const Foot = () => {
     return (
         <div className='foot'>
-            <footer>Brain.Bridgers@CrammerMail.com</footer>
+            <footer>17 Brain Under The Bridge Vallye, BB17 XYZ</footer>
         </div>
     )
 }

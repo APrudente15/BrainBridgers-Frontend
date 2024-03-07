@@ -38,7 +38,7 @@ function SignInForm({ logged, setLogged }) {
 
     return (
         <div className="form-container sign-in-container">
-            <form className="form" onSubmit={handleOnSubmit}>
+            <form className="form" onSubmit={handleOnSubmit} data-testid="signin-form">
                 <h1 className="h1">Existing User</h1>
                 <input
                     className="input"

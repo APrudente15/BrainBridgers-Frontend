@@ -34,7 +34,7 @@ const LoginRegister = ({ logged, setLogged }) => {
                     </div>
                     <div className="overlay-panel overlay-right">
                         <h1 className="h1 hf">Hello, Friend!</h1>
-                        <p className="pr">Enter your personal details and start journey with us</p>
+                        <p className="pr">Enter your personal details and start journey</p>
                         <br />
                         <button
                             className="button ghost "

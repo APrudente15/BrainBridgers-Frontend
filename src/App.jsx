@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react'
 function App() {
   const [name, setName] = useState('User')
   const [logged, setLogged] = useState(false)
+  const [auth, setAuth] = useState('')
   const location = useLocation();
 
   const navigate = useNavigate()
@@ -29,6 +30,7 @@ function App() {
             const userData = await response.json();
             setLogged(true)
             setName(userData.student.name)
+            setAuth(token)
           } else {
             console.error('Error fetching user data:', response.status);
           }
@@ -40,7 +42,6 @@ function App() {
         navigate('/')
       }
     }
-
     fetchUserData();
   }, [location.pathname]);
 
@@ -51,8 +52,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Nav logged={logged} setLogged={setLogged} />} >
           <Route index element={<LogReg logged={logged} setLogged={setLogged} />} />
-          <Route path='/discover' element={<Discover name={name} />} />
-          <Route path='/rate' element={<Rate />} />
+          <Route path='/discover' element={<Discover name={name} auth={auth} />} />
+          <Route path='/rate' element={<Rate auth={auth} />} />
         </Route>
       </Routes>
       <Foot />

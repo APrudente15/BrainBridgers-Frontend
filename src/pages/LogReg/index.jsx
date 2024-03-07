@@ -22,6 +22,10 @@ const LogReg = ({ logged, setLogged }) => {
 
     return (
         <div >
+            <div className='landing'>
+                <h1 className='l-text'>Take control of your learning</h1>
+                <p className='l-para'>Rate your lessons and learn your strengths with Brain Bridgers</p>
+            </div>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={controls}

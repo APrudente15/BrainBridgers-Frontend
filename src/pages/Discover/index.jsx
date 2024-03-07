@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label } from 'recharts';
 
-const Discover = ({ name }) => {
+const Discover = ({ name, auth }) => {
     const [data, setData] = useState([]);
+
+    const options = {
+        headers: {
+            'Authorization': auth
+        }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/students/1/lessons');
+                const response = await fetch('http://localhost:3000/students/1/lessons', options);
                 const { lessons } = await response.json();
                 const processedData = processLessonData(lessons);
                 setData(processedData);

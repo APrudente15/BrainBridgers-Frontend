@@ -116,7 +116,7 @@ const dopOptions = {
     }
 }
 
-const Rate = () => {
+const Rate = ({ auth }) => {
     const [lessonNum, setLessonNum] = useState(1)
     const [levelC, setLevelC] = useState(0)
     const [levelE, setLevelE] = useState(0)
@@ -128,12 +128,18 @@ const Rate = () => {
     const [init, setInit] = useState(false)
     const [time, setTime] = useState('09:00 - 10:00')
 
+    const options = {
+        headers: {
+            'Authorization': auth
+        }
+    }
+
     const controls = useAnimation();
 
     useEffect(() => {
         const getAll = async () => {
             try {
-                const response = await fetch('http://localhost:3000/schooldays/1/lessons')
+                const response = await fetch('http://localhost:3000/schooldays/1/lessons', options)
                 const data = await response.json()
                 setLessonData(data)
                 setInit(true)
@@ -147,7 +153,7 @@ const Rate = () => {
     useEffect(() => {
         const getAll = async () => {
             try {
-                const response = await fetch('http://localhost:3000/schooldays/1/lessons')
+                const response = await fetch('http://localhost:3000/schooldays/1/lessons', options)
                 const data = await response.json()
                 setLessonData(data)
             } catch (error) {
@@ -207,6 +213,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ enjoyment: 1 })
             })
@@ -227,6 +234,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ enjoyment: 2 })
             })
@@ -246,6 +254,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ enjoyment: 3 })
             })
@@ -265,6 +274,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ confidence: 1 })
             })
@@ -284,6 +294,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ confidence: 2 })
             })
@@ -303,6 +314,7 @@ const Rate = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': auth
                 },
                 body: JSON.stringify({ confidence: 3 })
             })
