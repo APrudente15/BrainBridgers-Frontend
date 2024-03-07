@@ -514,3 +514,39 @@ nav {
     opacity: 0.3;
     transform: rotate(23deg);
 }
+
+.dp {
+    width: 90vw;
+    height: 70vh;
+    margin: 0vh 5vw 5vh 5vw;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.chart-cont {
+    display: grid;
+    place-items: center;
+    height: 60vh;
+    width: 70vw;
+    background-color: #f9c2c2c2;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.bchart {
+    margin-right: 60px;
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.bc-title {
+    font-size: 60px;
+}
+
+.welc {
+    font-weight: 900;
+    font-size: 90px;
+    margin-bottom: 50px;
+}

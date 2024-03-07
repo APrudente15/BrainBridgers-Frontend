@@ -5,16 +5,17 @@ import Foot from './layouts/Foot'
 import LogReg from './pages/LogReg'
 import Rate from './pages/Rate'
 import Discover from './pages/Discover'
+import { useState } from 'react'
 
 function App() {
-
+  const [name, setName] = useState('User')
 
   return (
     <div className='app'>
       <Routes>
         <Route path='/' element={<Nav />} >
           <Route index element={<LogReg />} />
-          <Route path='/discover' element={<Discover />} />
+          <Route path='/discover' element={<Discover name={name} />} />
           <Route path='/rate' element={<Rate />} />
         </Route>
       </Routes>

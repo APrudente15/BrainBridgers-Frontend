@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label, Legend } from 'recharts';
 
-const Discover = () => {
+const Discover = ({ name }) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -51,17 +51,29 @@ const Discover = () => {
 
         const sum = validRatings.reduce((acc, rating) => acc + rating, 0);
         const average = sum / validRatings.length;
-        return isNaN(average) ? 0 : average;
+
+        const roundedAverage = parseFloat(average.toPrecision(3));
+
+        return isNaN(roundedAverage) ? 0 : roundedAverage;
     };
+
     return (
-        <BarChart width={800} height={500} data={data} margin={{ bottom: 100 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="subjectName" interval={0} angle={-45} textAnchor="end" />
-            <YAxis domain={[1, 3]} />
-            <Tooltip />
-            <Bar dataKey="averageConfidence" fill="#82ca9d" name="Average Confidence" />
-            <Bar dataKey="averageEnjoyment" fill="#8884d8" name="Average Enjoyment" />
-        </BarChart>
+        <div className='dp'>
+            <h1 className='welc'>Welcome {name}!</h1>
+            <div className='chart-cont'>
+                <h1 className='bc-title'>Average Confidence & Enjoyment Ratings</h1>
+                <BarChart width={1100} height={700} data={data} margin={{ bottom: 100 }} className='bchart'>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="subjectName" interval={0} angle={-45} textAnchor="end" />
+                    <YAxis domain={[1, 3]}>
+                        <Label value={'Average Rating out of 3'} angle={-90} />
+                    </YAxis>
+                    <Tooltip />
+                    <Bar dataKey="averageConfidence" fill="#82ca9d" name="Average Confidence" />
+                    <Bar dataKey="averageEnjoyment" fill="#8884d8" name="Average Enjoyment" />
+                </BarChart>
+            </div>
+        </div>
     )
 }
 
