@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import SignInForm from "./SignIn.jsx"
 import SignUpForm from "./SignUp"
 
-const LoginRegister = () => {
+const LoginRegister = ({ logged, setLogged }) => {
     const [type, setType] = useState("signIn")
 
     const handleOnClick = text => {
@@ -16,7 +16,7 @@ const LoginRegister = () => {
     return (
         <div className={containerClass} id="container">
             <SignUpForm />
-            <SignInForm />
+            <SignInForm logged={logged} setLogged={setLogged} />
             <div className="overlay-container">
                 <div className="overlay">
                     <div className="overlay-panel overlay-left">

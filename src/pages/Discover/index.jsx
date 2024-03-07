@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Label } from 'recharts';
 
 const Discover = ({ name }) => {
     const [data, setData] = useState([]);
@@ -62,11 +62,13 @@ const Discover = ({ name }) => {
             <h1 className='welc'>Welcome {name}!</h1>
             <div className='chart-cont'>
                 <h1 className='bc-title'>Average Confidence & Enjoyment Ratings</h1>
-                <BarChart width={1100} height={700} data={data} margin={{ bottom: 100 }} className='bchart'>
+                <BarChart width={1100} height={700} data={data} margin={{ bottom: 150 }} className='bchart'>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="subjectName" interval={0} angle={-45} textAnchor="end" />
-                    <YAxis domain={[1, 3]}>
-                        <Label value={'Average Rating out of 3'} angle={-90} />
+                    <XAxis dataKey="subjectName" interval={0} angle={-45} textAnchor="end" strokeWidth={2} />
+                    <YAxis domain={[1, 3]} strokeWidth={3}>
+                        <Label value={'Average Rating out of 3'} angle={-90} position="insideLeft"
+                            style={{ textAnchor: 'middle' }}
+                            dy={0} />
                     </YAxis>
                     <Tooltip />
                     <Bar dataKey="averageConfidence" fill="#82ca9d" name="Average Confidence" />

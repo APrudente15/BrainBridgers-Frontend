@@ -1,8 +1,19 @@
 import { useEffect } from 'react'
 import LoginRegister from '../../components/LoginRegister'
 import { motion, useAnimation } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
-const LogReg = () => {
+const LogReg = ({ logged, setLogged }) => {
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (logged) {
+            navigate('/discover')
+        }
+    }, [])
+
+
     const controls = useAnimation();
 
     useEffect(() => {
@@ -19,7 +30,7 @@ const LogReg = () => {
                 style={{ width: '100%', height: '100%' }}
             >
                 <div className='lr'>
-                    <LoginRegister />
+                    <LoginRegister logged={logged} setLogged={setLogged} />
                 </div>
             </motion.div>
         </div>
