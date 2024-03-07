@@ -14,8 +14,8 @@ const LoginRegister = ({ logged, setLogged }) => {
     const containerClass =
         "container " + (type === "signUp" ? "right-panel-active" : "")
     return (
-        <div className={containerClass} id="container">
-            <SignUpForm />
+        <div className={containerClass} id="container" data-testid="container">
+            < SignUpForm />
             <SignInForm logged={logged} setLogged={setLogged} />
             <div className="overlay-container">
                 <div className="overlay">
@@ -25,6 +25,7 @@ const LoginRegister = ({ logged, setLogged }) => {
                             Please login with your personal info
                         </p>
                         <button
+                            data-testid="signIn-button"
                             className="button ghost"
                             id="signIn"
                             onClick={() => handleOnClick("signIn")}
@@ -37,6 +38,7 @@ const LoginRegister = ({ logged, setLogged }) => {
                         <p className="pr">Enter your personal details and start journey</p>
                         <br />
                         <button
+                            data-testid="signUp-button"
                             className="button ghost "
                             id="signUp"
                             onClick={() => handleOnClick("signUp")}
@@ -46,7 +48,7 @@ const LoginRegister = ({ logged, setLogged }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
