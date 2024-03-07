@@ -34,7 +34,7 @@ const LogReg = ({ logged, setLogged }) => {
                 style={{ width: '100%', height: '100%' }}
             >
                 <div className='lr'>
-                    <LoginRegister logged={logged} setLogged={setLogged} />
+                    <LoginRegister logged={logged} setLogged={setLogged} data-testid="login-register" />
                 </div>
             </motion.div>
         </div>
