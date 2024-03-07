@@ -7,7 +7,7 @@ function SignInForm() {
 
     return (
         <div className="form-container sign-in-container">
-            <form className="form" onSubmit={handleOnSubmit}>
+            <form role="form" className="form" onSubmit={handleOnSubmit}>
                 <h1 className="h1">Existing User</h1>
                 <input
                     className="input"
