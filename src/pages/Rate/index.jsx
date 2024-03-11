@@ -139,7 +139,7 @@ const Rate = ({ auth }) => {
     useEffect(() => {
         const getAll = async () => {
             try {
-                const response = await fetch('http://localhost:3000/schooldays/1/lessons', options)
+                const response = await fetch('https://brainbridgers-backend-vck6.onrender.com/schooldays/1/lessons', options)
                 const data = await response.json()
                 setLessonData(data)
                 setInit(true)
@@ -153,7 +153,7 @@ const Rate = ({ auth }) => {
     useEffect(() => {
         const getAll = async () => {
             try {
-                const response = await fetch('http://localhost:3000/schooldays/1/lessons', options)
+                const response = await fetch('https://brainbridgers-backend-vck6.onrender.com/schooldays/1/lessons', options)
                 const data = await response.json()
                 setLessonData(data)
             } catch (error) {
@@ -208,7 +208,7 @@ const Rate = ({ auth }) => {
 
     const lowe = async () => {
         try {
-            const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
+            const enjoymentPatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
                 headers: {
@@ -229,7 +229,7 @@ const Rate = ({ auth }) => {
 
     const mide = async () => {
         try {
-            const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
+            const enjoymentPatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
                 headers: {
@@ -249,7 +249,7 @@ const Rate = ({ auth }) => {
 
     const highe = async () => {
         try {
-            const enjoymentPatchUrl = `http://localhost:3000/lessons/${lessonNum}/enjoyment`
+            const enjoymentPatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/enjoyment`
             const enjoymentResponse = await fetch(enjoymentPatchUrl, {
                 method: 'PATCH',
                 headers: {
@@ -269,7 +269,7 @@ const Rate = ({ auth }) => {
 
     const lowc = async () => {
         try {
-            const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
+            const confidencePatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
                 headers: {
@@ -289,7 +289,7 @@ const Rate = ({ auth }) => {
 
     const midc = async () => {
         try {
-            const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
+            const confidencePatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
                 headers: {
@@ -309,7 +309,7 @@ const Rate = ({ auth }) => {
 
     const highc = async () => {
         try {
-            const confidencePatchUrl = `http://localhost:3000/lessons/${lessonNum}/confidence`
+            const confidencePatchUrl = `https://brainbridgers-backend-vck6.onrender.com/lessons/${lessonNum}/confidence`
             const confidenceResponse = await fetch(confidencePatchUrl, {
                 method: 'PATCH',
                 headers: {

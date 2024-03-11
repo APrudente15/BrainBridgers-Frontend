@@ -10,7 +10,7 @@ function SignInForm({ logged, setLogged }) {
     const handleOnSubmit = async (evt) => {
         evt.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/students/login", {
+            const response = await fetch("https://brainbridgers-backend-vck6.onrender.com/students/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

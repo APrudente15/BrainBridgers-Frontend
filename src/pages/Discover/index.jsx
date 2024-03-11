@@ -13,7 +13,7 @@ const Discover = ({ name, auth }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/students/1/lessons', options);
+                const response = await fetch('https://brainbridgers-backend-vck6.onrender.com/students/1/lessons', options);
                 const { lessons } = await response.json();
                 const processedData = processLessonData(lessons);
                 setData(processedData);
