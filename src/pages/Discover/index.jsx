@@ -68,7 +68,7 @@ const Discover = ({ name, auth }) => {
             <h1 className='welc'>Welcome {name}!</h1>
             <div className='chart-cont'>
                 <h1 className='bc-title'>Average Confidence & Enjoyment Ratings</h1>
-                <BarChart width={1100} height={700} data={data} margin={{ bottom: 150 }} className='bchart' data-testid="bar-chart" >
+                <BarChart width={1100} height={800} data={data} margin={{ bottom: 150 }} className='bchart' data-testid="bar-chart" >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="subjectName" interval={0} angle={-45} textAnchor="end" strokeWidth={2} />
                     <YAxis domain={[1, 3]} strokeWidth={3}>

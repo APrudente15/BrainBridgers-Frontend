@@ -50,7 +50,8 @@ nav {
 .d {
     margin-bottom: 10px;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
+    transform: scale(1.5)
 }
 
 .nl {
@@ -100,7 +101,7 @@ nav {
     grid-row-end: 1;
     grid-column-start: 9;
     grid-column-end: 9;
-    margin-top: 47px;
+    margin-top: 42px;
 }
 
 .out:hover {
@@ -198,6 +199,7 @@ nav {
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    font-size: 20px;
 }
 
 .container {
@@ -371,7 +373,7 @@ nav {
 
 .selector {
     margin: 5vh 5vw 5vh 5vw;
-    transform: scale(3);
+    transform: scale(4);
 }
 
 .lesson-cont {
@@ -416,6 +418,7 @@ nav {
     grid-row: 1;
     margin-bottom: 25px;
     font-style: oblique;
+    font-size: 50px;
     text-transform: capitalize;
 }
 
@@ -423,21 +426,24 @@ nav {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 2;
-    height: 10vh;
+    height: 200px;
+    width: 200px;
 }
 
 .smiley-2 {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row: 2;
-    height: 10vh;
+    height: 200px;
+    width: 200px;
 }
 
 .smiley-3 {
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row: 2;
-    height: 10vh;
+    height: 200px;
+    width: 200px;
     transform: rotate(9deg);
 }
 
@@ -451,8 +457,8 @@ nav {
 }
 
 .smileyc {
-    height: 12vh;
-    width: 9vw;
+    height: 200px;
+    width: 200px;
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -460,8 +466,8 @@ nav {
 }
 
 .smileye {
-    height: 12vh;
-    width: 9vw;
+    height: 200px;
+    width: 200px;
     grid-row-start: 2;
     grid-column-start: 6;
     grid-column-end: 7;
@@ -509,8 +515,8 @@ nav {
     height: 200px;
     width: 250px;
     position: absolute;
-    top: 40vh;
-    right: 43vw;
+    top: 42vh;
+    right: 46vw;
     opacity: 0.3;
     transform: rotate(23deg);
 }
@@ -527,16 +533,17 @@ nav {
 .chart-cont {
     display: grid;
     place-items: center;
-    height: 60vh;
+    height: 70vh;
     width: 70vw;
     background-color: #f9c2c2c2;
     padding: 15px;
     border-radius: 20px;
+    transform: scale(1.1,1)
 }
 
 .bchart {
     margin-right: 60px;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: 800;
     font-style: italic;
 }
@@ -549,15 +556,15 @@ nav {
 .welc {
     font-weight: 800;
     font-size: 60px;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 .info {
     position: fixed;
     height: 50px;
     width: 50px;
-    top: 4vh;
+    top: 3vh;
     right: 15vw;
 }
 
