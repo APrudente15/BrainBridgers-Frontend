@@ -68,7 +68,7 @@ const Nav = ({ logged, setLogged }) => {
                 <div>
                     <img onClick={dispInfo} className='info' src='https://cdn-icons-png.flaticon.com/512/8/8201.png' />
                     {seeInf ? <img className='inst' src='./src/assets/ins.png' /> : null}
-                    {seeInf ? <img onClick={hide} className='cross' src='https://cdn-icons-png.flaticon.com/512/51/51517.png' /> : null}
+                    {seeInf ? <img onClick={hide} className='cross' src='https://github.com/APrudente15/BrainBridgersLogo/assets/110691505/5ece48eb-d38c-4ad4-a07a-bb3532c12191' /> : null}
                 </div>
             </>
         )
