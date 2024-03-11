@@ -20,7 +20,7 @@ function App() {
       const token = localStorage.getItem('token')
       if (token) {
         try {
-          const response = await fetch('http://localhost:3000/students/me', {
+          const response = await fetch('https://brainbridgers-backend-vck6.onrender.com/students/me', {
             method: 'GET',
             headers: {
               Authorization: token,
