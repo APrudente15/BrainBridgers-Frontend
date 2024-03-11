@@ -29,7 +29,7 @@ function SignInForm({ logged, setLogged }) {
             localStorage.setItem("token", data.token);
             console.log("Sign-in successful!");
             setLogged(true)
-            navigate('/discover')
+            navigate('/rate')
         } catch (error) {
             console.error("Error signing in:", error.message);
             window.alert('Invalid user credentials. Try again...')
